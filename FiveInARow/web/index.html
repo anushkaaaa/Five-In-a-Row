@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="shortcut icon" href="">
+        <script src="websocket.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Five In A Row</h1>
+            <p>Welcome to the Five In A Row- Two Player Game.</p>
+            <br/>
+            <div id="addUser">
+                <p>Click the Add a player button to start playing.</p>
+                <div class="button"> <a href="#" OnClick="showForm()">Add a Player</a> </div>
+                <form id="addUserForm" >
+                    <h3>Add a new player</h3>
+                    <span>Name: <input type="text" name="user_name" id="user_name"></span>
+                    <input type="button" class="button" value="Add" onclick=formSubmit()>
+                    <input type="reset" class="button" value="Cancel" onclick=hideForm()>
+                </form>
+            </div>
+            <br/>
+            <div id="quitGame">
+                <input type="button" class="button" value="End Game" onclick=quitGame()>
+            </div>
+            <div id= "connectedPlayer" style="display:none">
+                 <h2>Currently connected Players:</h2>
+            </div>
+            <div id="content"></div>
+            <div id="container">
+		<canvas id="chess" width="640" height="640"></canvas>
+		<div id="sideBox"></div>
+            </div>
+        </div>
+    </body>
+</html>
